@@ -272,7 +272,7 @@
           <a href="https://www.linkedin.com/company/cofebot/posts/?feedView=all" class="social-btn" title="LinkedIn">
             <img src="./assets/icons/linkedinIcon.svg" alt="LinkedIn" class="social-btn-image">
           </a>
-          <a href="#" class="social-btn" title="YouTube">
+          <a href="https://www.youtube.com/channel/UCWFndvs5Zt84Rt_GNMYz2EA" class="social-btn" title="YouTube">
             <img src="./assets/icons/youtubeIcon.svg" alt="YouTube" class="social-btn-image">
           </a>
         </div>
@@ -413,7 +413,6 @@
     });
   });
 
-  // Atualiza URL conforme a seção visível durante scroll
   const sections = document.querySelectorAll('section[id]');
   const sectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -425,8 +424,7 @@
   sections.forEach(s => sectionObserver.observe(s));
 </script>
 
-<!-- ===================== MANUTENÇÃO — apague este bloco para restaurar o site ===================== -->
-<div id="manutencao" style="
+<!-- <div id="manutencao" style="
   position: fixed; inset: 0; z-index: 9999;
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   background: rgba(0, 0, 0, 0.55);
@@ -437,8 +435,7 @@
 ">
   <p style="font-size: .8rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #00c0da; margin-bottom: 1rem;">Site em manutenção</p>
   <h1 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 1rem;">Voltamos em breve.</h1>
-</div>
-<!-- ===================== FIM DO BLOCO DE MANUTENÇÃO ===================== -->
+</div> -->
 
 </body>
 </html>
