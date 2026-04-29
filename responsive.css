@@ -14,6 +14,30 @@
   .nav-cta    { display: none; }
   .hamburger  { display: flex; }
 
+  /* Hero mobile: imagem em cima, texto no meio, botões em baixo */
+  #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
+    gap: 1rem;
+  }
+  .robot-icon {
+    order: -1;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-title   { text-align: center; }
+  .hero-subtitle { text-align: center; max-width: 100%; }
+  .hero-actions { justify-content: center; flex-wrap: wrap; }
+
   .topbar-toggle-input:checked ~ .nav-links {
     display: flex;
     flex-direction: column;

@@ -8,10 +8,12 @@
 </head>
 <body>
 
+<h1>site em manutenção</h1>
+
 <!-- Barra do topo -->
 <nav class="topbar">
     <input type="checkbox" id="nav-toggle" class="topbar-toggle-input" />
-    <a href="#home" class="topbar-logo">
+    <a href="/" class="topbar-logo">
         <img src="./assets/cofebot-logotipo-principal.svg" alt="COFEBOT" />
     </a>
     <ul class="nav-links">
@@ -34,7 +36,8 @@
 <!-- Primeira sessão (Home) -->
 <section id="home">
     <div class="hero-content">
-        <h1 class="hero-title">Café de barista, feito por um robô. Conheça a <span class="highlight">COFEBOT.</span></h1>
+        <h1 class="hero-title">Café de barista, feito por um robô.</h1>
+        <h1 class="hero-title">Conheça a <span class="highlight">COFEBOT</span></h1>
         <p class="hero-subtitle">Operação autônoma, preparo rápido e experiência que chama atenção. Ideal para ambientes de alto fluxo.</p>
 
         <div class="hero-actions">
@@ -139,7 +142,7 @@
   <div class="como-header reveal">
     <h2 class="section-title">Como funciona?</h2>
     <p class="section-sub">
-      Do pedido à xícara em poucos segundos. Veja como seu café é preparado.
+      Do pedido ao copo em poucos segundos. Veja como seu café é preparado.
     </p>
   </div>
   <div class="steps-grid reveal">
@@ -278,7 +281,7 @@
     <div class="contato-form">
       <h3>Pedir orçamento</h3>
       <form>
-        <div class="form-row">4
+        <div class="form-row">
           <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
@@ -398,6 +401,44 @@
     card.addEventListener('mouseenter', () => video.play());
     card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
   });
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', '/');
+      }
+    });
+  });
+
+  // Atualiza URL conforme a seção visível durante scroll
+  const sections = document.querySelectorAll('section[id]');
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        history.replaceState(null, '', '/');
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => sectionObserver.observe(s));
 </script>
+
+<!-- ===================== MANUTENÇÃO — apague este bloco para restaurar o site ===================== -->
+<div id="manutencao" style="
+  position: fixed; inset: 0; z-index: 9999;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.55);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 2rem;
+  font-family: 'InterTight', sans-serif;
+">
+  <p style="font-size: .8rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #00c0da; margin-bottom: 1rem;">Site em manutenção</p>
+  <h1 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 1rem;">Voltamos em breve.</h1>
+</div>
+<!-- ===================== FIM DO BLOCO DE MANUTENÇÃO ===================== -->
+
 </body>
 </html>
