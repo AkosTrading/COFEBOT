@@ -1,0 +1,83 @@
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  height: 4.5rem;
+  background: var(--color-terciary);
+  backdrop-filter: blur(1rem);
+  border-bottom: 1px solid rgba(0, 179, 204, 0.2);
+}
+
+.topbar-logo img { height: 2.25rem; width: auto; }
+.topbar-toggle-input { display: none; }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-family: var(--font-principal);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  position: relative;
+  padding-bottom: 0.1875rem;
+  transition: color var(--ease);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--color-primary);
+  transition: width var(--ease);
+}
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-mobile-cta { display: none; }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.nav-cta {
+  background: var(--color-secondary);
+  color: var(--color-terciary);
+  font-family: var(--font-principal);
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 0.625rem 1.375rem;
+  border-radius: 99px;
+  transition: var(--ease);
+}
+.nav-cta:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-0.0625rem);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3125rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+.hamburger span {
+  display: block;
+  width: 1.5rem; height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: var(--ease);
+}
+.topbar-toggle-input:checked ~ .hamburger span:nth-child(1) { transform: translateY(0.4375rem) rotate(45deg); }
+.topbar-toggle-input:checked ~ .hamburger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.topbar-toggle-input:checked ~ .hamburger span:nth-child(3) { transform: translateY(-0.4375rem) rotate(-45deg); }

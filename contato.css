@@ -1,0 +1,189 @@
+#contato {
+  background-color: var(--color-primary);
+}
+
+#contato .section-tag{
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.35);
+  color: var(--color-text-primary); }
+#contato .section-title { color: var(--color-terciary); }
+#contato .section-sub   { color: var(--color-text-secondary) }
+
+.contato-header {
+  text-align: center;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.contato-header .section-sub { max-width: 100%;}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  background: rgba(171, 171, 171, 0.15);
+  border: 1px solid var(--color-terciary);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.info-text h4 {
+  font-family: var(--font-principal);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-terciary);
+  margin-bottom: 0.25rem;
+}
+
+.info-text p  {
+  font-size: .88rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.social-label {
+  font-family: var(--font-principal);
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--color-terciary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: .12em; 
+}
+
+.social-row {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.social-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(171, 171, 171, 0.15);
+  border: 1px solid var(--color-terciary);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--ease);
+}
+
+.social-btn:hover {
+  background: rgba(0, 54, 81, 0.25);
+  border-color: rgba(255,255,255,.5);
+  transform: translateY(-0.1875rem);
+}
+
+.social-btn-image  { margin: 0.5rem; }
+.floating-btn-image { margin: 0.7rem; }
+
+.contato-form {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.contato-form h3 {
+  font-family: var(--font-principal);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  margin-bottom: 1.75rem;
+}
+
+.form-group { margin-bottom: 1.125rem; }
+
+.form-group label {
+  display: block;
+  font-family: var(--font-principal);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8125rem 1rem;
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid var(--color-primary-mid-dark);
+  border-radius: 0.625rem;
+  color: #ffffff8d;
+  font-family: var(--font-secondary);
+  font-size: .92rem;
+  font-weight: 300;
+  outline: none;
+  transition: var(--ease);
+  appearance: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #ffffff8d;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--color-primary-mid-dark);
+  background: var(--color-primary-mid-dark);
+}
+.form-group select option {
+  background: var(--color-primary);
+  color: var(--color-terciary);
+  text-decoration: none;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 6.875rem; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem; }
+
+.btn-submit {
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--color-terciary);
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  font-family: var(--font-principal);
+  font-size: .9rem; font-weight: 700;
+  color: var(--color-text-secondary);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: var(--ease);
+}
+
+.btn-submit:hover {
+  background: var(--color-terciary);
+  color: var(--color-primary-dark);
+  transform: translateY(-0.125rem);
+}

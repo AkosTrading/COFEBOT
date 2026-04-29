@@ -1,0 +1,93 @@
+#conheca { background: #F0FBFD; }
+
+.conheca-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+.conheca-visual { position: relative; }
+.conheca-bg-card {
+  width: 100%;
+  aspect-ratio: 1;
+  background-image: url('./assets/roboBarista.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.float-badge {
+  position: absolute;
+  bottom: -1.25rem; right: -1.25rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)150%);
+  color: var(--color-terciary);
+  font-family: var(--font-principal);
+  font-weight: 900;
+  font-size: .85rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.float-badge span { display: block; font-size: 1.5rem; font-weight: 900; }
+
+.conheca-text h3 {
+  font-family: var(--font-principal);
+  font-size: 1.55rem; font-weight: 900;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 0.875rem;
+}
+
+.conheca-text p {
+  color: var(--color-text-secondary);
+  line-height: 1.75; font-weight: 300;
+  margin-bottom: 0.625rem;
+}
+
+.features-list {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feat-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)150%);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.feat-text h4 {
+  font-family: var(--font-principal);
+  font-size: .95rem; font-weight: 700;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.feat-text p  {
+  font-size: .88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}

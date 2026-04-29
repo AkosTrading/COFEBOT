@@ -1,0 +1,102 @@
+@media (max-width: 64rem) {
+  .steps-grid         { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+
+  .cafes-showcase     { gap: 1.5rem; }
+  .cafes-image        { width: 16rem; }
+
+  .conheca-grid       { gap: 2.5rem; }
+}
+
+@media (max-width: 48rem) {
+
+  .nav-links  { display: none; }
+  .nav-cta    { display: none; }
+  .hamburger  { display: flex; }
+
+  .topbar-toggle-input:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 4.5rem;
+    left: 0; right: 0;
+    background: var(--color-primary-dark);
+    backdrop-filter: blur(1rem);
+    padding: 0.5rem 6vw 1.5rem;
+    z-index: 98;
+    border-top: 1px solid rgba(255,255,255,.15);
+  }
+  .topbar-toggle-input:checked ~ .nav-links li a {
+    display: block;
+    padding: 0.875rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    color: rgba(255,255,255,.85);
+  }
+  .topbar-toggle-input:checked ~ .nav-links .nav-mobile-cta {
+    display: list-item;
+    padding-top: 0.75rem;
+  }
+  .topbar-toggle-input:checked ~ .nav-links .nav-mobile-cta a {
+    display: block;
+    background: var(--color-text-primary);
+    color: var(--color-primary);
+    border-radius: 99px;
+    text-align: center;
+    font-family: var(--font-principal);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Seções */
+  section { padding: 4.5rem 5vw; }
+  /* Conheça */
+  .conheca-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
+  .conheca-grid .conheca-visual { order: -1; }
+  .float-badge  { bottom: -1rem; right: -0.5rem; }
+  /* Cafés */
+  .cafes-showcase       { grid-template-columns: 1fr; justify-items: center; }
+  .cafes-image          { width: 14rem; order: -1; }
+  .cafes-list--left,
+  .cafes-list--right    { width: 100%; text-align: left; }
+  .cafes-list--right li:hover { padding-left: 0.375rem; padding-right: 0; }
+  /* Mídias */
+  .midias-grid    { grid-template-columns: repeat(2, 1fr); }
+  .media-card.big { grid-column: span 2; }
+  /* Como funciona */
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Contato */
+  .contato-grid { grid-template-columns: 1fr; }
+  .form-row     { grid-template-columns: 1fr; }
+  /* Footer */
+  .footer-inner  { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+  .footer-links  { gap: 1rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+
+@media (max-width: 30rem) {
+  /* Seções */
+  section { padding: 4rem 4vw; }
+  /* Hero */
+  #home { padding: 6rem 4vw 3.5rem; }
+  .hero-actions           { flex-direction: column; gap: 0.75rem; }
+  .hero-actions a         { text-align: center; width: 100%; }
+  /* Cafés */
+  .cafes-list li { font-size: .9rem; padding: .75rem 0; }
+  /* Como funciona */
+  .steps-grid { grid-template-columns: 1fr; }
+  /* Mídias */
+  .midias-grid            { grid-template-columns: 1fr; }
+  .media-card.big         { grid-column: span 1; }
+  .media-card.big .media-inner { aspect-ratio: 1; }
+  /* Contato */
+  .contato-form   { padding: 1.5rem; }
+  .contato-header { padding: 0 0.5rem; }
+  /* Footer */
+  .footer-inner  { align-items: center; text-align: center; }
+  .footer-links  { justify-content: center; }
+  .footer-bottom { align-items: center; text-align: center; }
+  /* Botão flutuante WhatsApp */
+  .floating-wa { bottom: 1rem; right: 1rem; width: 3rem; height: 3rem; font-size: 1.3rem; }
+}

@@ -1,0 +1,56 @@
+#midias { background: var(--color-terciary); }
+
+.midias-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;
+}
+
+.midias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+
+.media-card {
+  border-radius: 1.25rem; overflow: hidden;
+  position: relative; cursor: pointer; transition: var(--ease);
+}
+.media-card:hover { transform: scale(1.02); }
+.media-card:hover .media-overlay { opacity: 1; }
+
+.media-inner {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+}
+.media-card.big              { grid-column: span 2; }
+.media-card.big .media-inner { aspect-ratio: 2/1; }
+
+.media-inner img,
+.media-inner video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Gradientes de fallback (aparecem quando o quadro está vazio) */
+.m1 { background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); }
+.m2 { background: linear-gradient(135deg, var(--color-primary), #29B6F6); }
+.m3 { background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); }
+.m4 { background: linear-gradient(135deg, var(--color-primary), var(--color-terciary)); }
+.m5 { background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); }
+
+.media-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0, 100, 130, 0.55);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.5rem;
+  opacity: 0; transition: var(--ease);
+}
+.media-overlay-icon  { font-size: 2.5rem; }
+.media-overlay-label {
+  font-family: var(--font-principal); font-size: .82rem; font-weight: 700;
+  color: #fff; letter-spacing: .1em; text-transform: uppercase;
+}
+
+.midias-cta { text-align: center; margin-top: 2.5rem; }

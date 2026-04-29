@@ -1,0 +1,52 @@
+#cafes { background: var(--color-terciary); }
+
+.cafes-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.cafes-showcase {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.cafes-image {
+  width: 30rem;
+  flex-shrink: 0;
+}
+
+.cafes-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 1.5rem 2.5rem rgba(255, 255, 255, 0.18));
+}
+
+.cafes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.cafes-list--left  { text-align: left; }
+.cafes-list--right { text-align: right; }
+
+.cafes-list li {
+  font-family: var(--font-principal);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 179, 204, 0.2);
+  cursor: default;
+  transition: color var(--ease), padding var(--ease);
+}
+
+.cafes-list li:first-child { border-top: 1px solid rgba(0, 179, 204, 0.2); }
+
+.cafes-list li:hover { color: var(--color-primary); padding-left: 0.375rem; }
+.cafes-list--right li:hover { padding-left: 0; padding-right: 0.375rem; }
