@@ -23,7 +23,7 @@ footer {
 .footer-tagline {
   font-size: .82rem;
   font-weight: 300;
-  color: rgba(255,255,255,.3);
+  color: var(--color-text-primery);
   margin-top: 0.5rem;
 }
 
@@ -39,7 +39,7 @@ footer {
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.55);
+  color: var(--color-text-primery);
   transition: color var(--ease);
 }
 
@@ -56,13 +56,13 @@ footer {
 .footer-copy {
   font-size: .78rem;
   font-weight: 300;
-  color: rgba(255,255,255,.3);
+  color: var(--color-text-primery);
 }
 
 .footer-tech {
   font-size: .78rem;
   font-weight: 300;
-  color: rgba(255,255,255,.3);
+  color: var(--color-text-primery);
 }
 
 .footer-tech span { color: var(--color-terciary); }

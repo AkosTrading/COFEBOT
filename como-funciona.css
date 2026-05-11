@@ -1,7 +1,10 @@
 #como-funciona {
   background-color: var(--color-primary);
   color: var(--color-text-primary);
+  width: 100%;
+  padding: 6rem 4rem 6rem 4rem;
 }
+
 #como-funciona .section-tag {
   background: rgba(255,255,255,.15);
   border-color: rgba(255,255,255,.35);
@@ -12,7 +15,7 @@
 
 .como-header {
   text-align: center;
-  max-width: 36.25rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -73,4 +76,20 @@
   color: var(--color-text-secondary);
   line-height: 1.65;
   font-weight: 300;
+}
+
+.como-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 4rem 0 0 0;
+  width: 100%;
+}
+
+.como-footer-image {
+  width: calc(33.33% - 1rem); 
+  max-width: 100%; 
+  height: auto;
+  border-radius: var(--radius); 
+  object-fit: cover; 
 }

@@ -1,8 +1,11 @@
-#midias { background: var(--color-terciary); }
+#midias { background: var(--color-terciary); padding: 6rem 4rem 6rem 4rem;}
 
 .midias-header {
-  display: flex; justify-content: space-between;
-  align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .midias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }

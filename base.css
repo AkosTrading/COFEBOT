@@ -8,6 +8,7 @@ body {
   color: var(--color-text-secondary);
   overflow-x: hidden;
 }
+
 img { display: block; max-width: 100%; }
 a   { text-decoration: none; color: inherit; }
 
@@ -15,7 +16,7 @@ a   { text-decoration: none; color: inherit; }
 ::-webkit-scrollbar-track { background: #E0F7FA; }
 ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 99px; }
 
-section { padding: 6.25rem 6vw; }
+/* section { padding: 6.25rem 6vw; } */
 
 .section-tag {
   display: inline-block;
@@ -44,7 +45,7 @@ section { padding: 6.25rem 6vw; }
   font-weight: 300;
   line-height: 1.75;
   color: var(--color-text-secondary);
-  max-width: 33.75rem;
+  max-width: 100%;
 }
 
 .reveal { animation: revealUp 0.65s ease-out both; }
@@ -57,8 +58,8 @@ section { padding: 6.25rem 6vw; }
 }
 
 .btn-primary {
-  background: var(--color-primary);
-  color: var(--color-terciary);
+  background: var(--color-primary-dark);
+  color: var(--color-text-primary);
   font-family: var(--font-principal);
   font-weight: 700;
   font-size: .7rem;
@@ -74,14 +75,13 @@ section { padding: 6.25rem 6vw; }
   white-space: nowrap;
 }
 .btn-primary:hover {
-  background: var(--color-gradient-start);
-  color: var(--color-terciary);
+  background: var(--color-text-primary);
+  color: var(--color-primary-dark);
   transform: translateY(-0.1875rem);
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1.5px solid var(--color-primary);
+  background: var(--color-text-primary);
   color: var(--color-primary);
   font-family: var(--font-principal);
   font-weight: 700;
@@ -97,7 +97,7 @@ section { padding: 6.25rem 6vw; }
   white-space: nowrap;
 }
 .btn-outline:hover {
-  border-color: var(--color-primary-dark);
-  color: var(--color-gradient-start);
+  background: var(--color-primary-dark);
+  color: var(--color-text-primary);
   transform: translateY(-0.1875rem);
 }

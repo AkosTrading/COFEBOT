@@ -2,10 +2,9 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(var(--color-primary) 1%, var(--color-terciary) 70%);
+  background: var(--color-primary);
   overflow: hidden;
-  padding: 7.5rem 6vw 5rem;
-  color: var(--color-text-primary);
+  padding: 8rem 4rem 6rem 4rem;
 }
 
 .hero-content { position: relative; z-index: 2; max-width: 37.5rem; }
@@ -27,8 +26,6 @@
   line-height: 1.75;
   color: var(--color-text-secondary);
   margin-bottom: 2.375rem;
-  max-width: 32.5rem;
-  opacity: .85;
 }
 
 .robot-icon {
@@ -39,7 +36,8 @@
   z-index: 2;
   filter: drop-shadow(0 1.5rem 2rem rgba(255, 255, 255, 0.45));
 }
-.robot-icon img { width: 100%; height: auto; object-fit: contain; }
+
+.robot-icon img { width: 100%; height: auto; object-fit: contain;}
 
 .hero-actions {
   display: flex;

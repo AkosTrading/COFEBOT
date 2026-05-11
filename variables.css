@@ -30,12 +30,11 @@
 }
 
 :root {
-  --color-primary:        #00c0da;
-  --color-primary-dark:   #006e7a;
-  --color-primary-mid-dark:   #0095a653;
-  --color-gradient-start: #0097aa;
-  --color-secondary:      #00B3CC;
-  --color-terciary:       #f0fdf5;
+  --color-primary:        #2CCCD3;
+  --color-primary-dark:   #219da3;
+  --color-primary-mid-dark:   #219da353;
+  --color-secondary:      #61ebf2;
+  --color-terciary:       #ffffff;
   --color-text-primary:   #2d2d2d;
   --color-text-secondary: #394043;
 

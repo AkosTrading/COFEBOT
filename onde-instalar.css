@@ -1,0 +1,53 @@
+#onde-instalar{
+  padding: 6rem 4rem 6rem 4rem;
+}
+
+.onde-instalar-imgs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem 0 2rem 0;
+  width: 100%;
+}
+
+.onde-footer-image1 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.onde-footer-image2 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column; 
+}
+
+.onde-footer-image{
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius); 
+  object-fit: cover;
+}
+
+.instalar-subtitle{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+}
+
+.instalar-list{
+  list-style: none;
+  font-family: var(--font-principal);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--color-text-secondary);
+  cursor: default;
+  transition: color var(--ease), padding var(--ease);
+}
+
+.instalar-list li {
+  padding: 0.5rem 0;
+}

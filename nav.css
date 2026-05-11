@@ -48,7 +48,7 @@ nav {
 }
 
 .nav-cta {
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: var(--color-terciary);
   font-family: var(--font-principal);
   font-weight: 700;

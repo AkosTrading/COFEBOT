@@ -1,0 +1,43 @@
+#diferenciais {
+  background: var(--color-terciary);
+  width: 100%;
+  padding: 0 4rem 10rem 4rem;
+}
+
+.diferenciais-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.diferenciais-image {
+  width: 80%;
+  height: auto;
+  display: block;
+  padding: 5rem 0 2rem 0;
+}
+
+.diferenciais-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 4rem 4rem 0 4rem;
+  gap: 8rem;
+}
+
+.diferencial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.dif-title {
+  font-family: var(--font-principal);
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}

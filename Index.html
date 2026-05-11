@@ -1,420 +1,524 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>COFEBOT</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-
-<h1>site em manutenção</h1>
-
-<!-- Barra do topo -->
-<nav class="topbar">
+  <!-- Barra do topo -->
+  <nav class="topbar">
     <input type="checkbox" id="nav-toggle" class="topbar-toggle-input" />
     <a href="/" class="topbar-logo">
-        <img src="./assets/cofebot-logotipo-principal.svg" alt="COFEBOT" />
+      <img src="./assets/cofebot-logotipo-principal.svg" alt="COFEBOT" />
     </a>
     <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#conheca">Conheça</a></li>
-        <li><a href="#cafes">Cafés</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#midias">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li class="nav-mobile-cta"><a href="#contato">Pedir orçamento</a></li>
+      <a href="#home">Início</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#onde-instalar">Onde instalar</a>
+      <a href="#operacao">Operação</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
     </ul>
     <div class="nav-actions">
-      <a href="#contato" class="nav-cta">Pedir orçamento</a>
+      <a href="#contato" class="nav-cta">Receber apresentação comercial</a>
     </div>
-    <label for="nav-toggle" class="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </label>
-</nav>
+  </nav>
 
-<!-- Primeira sessão (Home) -->
-<section id="home">
+  <!-- Primeira sessão (Home) -->
+  <section id="home">
     <div class="hero-content">
-        <h1 class="hero-title">Café de barista, feito por um robô.</h1>
-        <h1 class="hero-title">Conheça a <span class="highlight">COFEBOT</span></h1>
-        <p class="hero-subtitle">Operação autônoma, preparo rápido e experiência que chama atenção. Ideal para ambientes de alto fluxo.</p>
+      <h1 class="hero-title">Café automatizado para locais de alto fluxo.</h1>
+      <p class="hero-subtitle">Quiosques robóticos que preparam bebidas em segundos, operam 24/7 e ocupam pouco espaço.
+      </p>
+      <p class="hero-subtitle">A COFEBOT chega ao Brasil com uma operação compacta para shopping centers, aeroportos,
+        universidades, hospitais, empresas e varejo.</p>
 
-        <div class="hero-actions">
-            <a href="#como-funciona" class="btn-outline">CONHECER A SOLUÇÃO</a>
-            <a href="#contato" class="btn-primary">ADQUIRIR UMA MÁQUINA</a>
-            <a href="#contato" class="btn-primary">PROPOR PARCERIA</a>
+      <div class="hero-actions">
+        <a href="#contato" class="btn-primary">VER COMO FUNCIONA</a>
+        <a href="#contato" class="btn-primary">FALAR COM A EQUIPE</a>
+        <a href="#como-funciona" class="btn-outline">QUERO INVESTIR EM UMA UNIDADE</a>
+      </div>
+    </div>
+    <div class="robot-icon reveal">
+      <img src="./assets/cofebot-home-maquina-perspectiva-direita.webp" alt="COFEBOT" class="robot-image" />
+    </div>
+  </section>
+
+  <!-- Segunda sessão (Conheça) -->
+  <section id="conheca">
+    <div class="conheca-header reveal">
+      <div class="conheca-primeiro-bloco">
+        <div class="conheca-img reveal">
+          <img src="./assets/imgs_galery/cofebot_cup.png" alt="COFEBOT" class="conheca-bg-image" />
         </div>
-    </div>
-    <div class="robot-icon">
-        <img src="./assets/cofebot-home-maquina-perspectiva-direita.webp" alt="COFEBOT" class="robot-image"/>
-    </div>
-</section>
-
-<!-- Segunda sessão (Conheça) -->
-<section id="conheca">
-    <div class="reveal">
-        <h2 class="section-title">Conheça a COFEBOT</h2>
-    </div>
-
-    <div class="conheca-grid reveal">
-        <div class="conheca-visual">
-            <div class="conheca-bg-card">
-                <img src="./assets/roboBarista.png" alt="COFEBOT" class="conheca-bg-image"/>
-            </div>
-            <div class="float-badge">
-                <span>+ de 65</span>
-                PAÍSES
-            </div>
+        <div class="reveal">
+          <h2 class="section-title">CONHEÇA A COFEBOT</h2>
+          <div class="conheca-text">
+            <p>A COFEBOT é a marca brasileira da rede global COFE+, especializada em robôs baristas para pontos de alto
+              fluxo. Cada unidade combina preparo automatizado, pagamento digital e gestão remota em uma estrutura
+              compacta.</p>
+          </div>
         </div>
-        <div class="conheca-text">
-            <h3>Tecnologia de barista no tamanho certo para o seu negócio</h3>
-            <p>
-              A COFEBOT faz parte de uma rede global de robôs baristas e chega ao Brasil com cafés e bebidas preparados por robô, operação autônoma, consistência e velocidade. Projetada para ambientes de alto fluxo, foi criada para operar de forma contínua e controlar cada etapa do preparo.
-            </p>
+      </div>
+
+      <div class="conheca-segundo-bloco reveal">
+        <div class="conheca-header-b2">
+          <h3 class="conheca-title">Projetada para rodar todos os dias.</h3>
+          <p>Uma estrutura de café automatizado para locais onde fluxo, velocidade e consistência importam.</p>
+        </div>
+        <div class="conheca-b2">
+          <img src="./assets/cofebot-home-maquina-vista-frontal.webp" alt="COFEBOT" class="conheca-robo-image" />
+          <div class="conheca-robo">
             <ul class="features-list">
-                <li>
-                    <div class="feat-icon"><img src="./assets/icons/cup-soda.svg" alt="ícone de café"></div>
-                    <div class="feat-text">
-                        <h4>Café personalizado</h4>
-                        <p>Grãos moídos na hora e personalizados ao seu gosto.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="feat-icon"><img src="./assets/icons/clockIcon.svg" alt="ícone de relógio"></div>
-                    <div class="feat-text">
-                        <h4>Desempenho robótico</h4>
-                        <p>Preparo ultra-rápido em 50s e 100% autônomo.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="feat-icon"><img src="./assets/icons/brainIcon.svg" alt="ícone de limpeza"></div>
-                    <div class="feat-text">
-                        <h4>Gestão inteligente</h4>
-                        <p>Monitore vendas, estoque e alertas de manutenção em tempo real.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="feat-icon"><img src="./assets/icons/handshake.svg" alt="ícone de parceria"></div>
-                    <div class="feat-text">
-                        <h4>Instalação inclusa</h4>
-                        <p>Insumos, manutenção e suporte inclusos, você só disponibiliza o espaço.</p>
-                    </div>
-                </li>
+              <div class="feat-p1">
+                <div class="feat-text">
+                  <h4 class="feat-title">Operação 24/7</h4>
+                  <p>Funcionamento contínuo em ambientes comerciais e corporativos.</p>
+                </div>
+                <div class="feat-text">
+                  <h4 class="feat-title">Preparo rápido</h4>
+                  <p>Bebidas prontas em aproximadamente 50 segundos.</p>
+                </div>
+                <div class="feat-text">
+                  <h4 class="feat-title">Estrutura compacta</h4>
+                  <p>Formato pensado para corredores, halls e áreas de circulação.</p>
+                </div>
+              </div>
+              <div class="feat-p2">
+                <div class="feat-text">
+                  <h4 class="feat-title">Gestão remota</h4>
+                  <p>Acompanhamento de status, estoque e operação.</p>
+                </div>
+                <div class="feat-text">
+                  <h4 class="feat-title">Preparo visível</h4>
+                  <p>O robô prepara a bebida diante do cliente.</p>
+                </div>
+                <div class="feat-text">
+                  <h4 class="feat-title">Cardápio flexível</h4>
+                  <p>Cafés clássicos, bebidas geladas e opções personalizáveis.</p>
+                </div>
+              </div>
             </ul>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Terceira sessão (Cafés) -->
-<section id="cafes">
+  <!-- Terceira sessão (Cafés) -->
+  <section id="cafes">
 
-  <div class="cafes-header reveal">
-    <h2 class="section-title">Mais de 20 bebidas no cardápio</h2>
-  </div>
-
-  <div class="cafes-showcase reveal">
-
-    <ul class="cafes-list cafes-list--left">
-      <li>Café clássico</li>
-      <li>Espresso</li>
-      <li>Capuccino</li>
-      <li>Mocha</li>
-      <li>Chocolate quente</li>
-    </ul>
-
-    <div class="cafes-image">
-      <img src="./assets/copoImg.png" alt="COFEBOT" />
+    <div class="cafes-header reveal">
+      <h2 class="section-title">Do espresso ao matcha latte</h2>
+      <p class="hero-subtitle">Cafés clássicos, bebidas geladas, chocolate quente e opções cremosas preparadas na hora.
+      </p>
     </div>
 
-    <ul class="cafes-list cafes-list--right">
-      <li>Latte</li>
-      <li>Matcha</li>      
-      <li>Macchiato de caramelo</li>
-      <li>Iced latte</li>
-      <li>Café com chá verde</li>
-    </ul>
-  </div>
-</section>
+    <div class="cafes-showcase reveal">
+      <ul class="cafes-list cafes-list--left">
+        <li>Café clássico</li>
+        <li>Espresso</li>
+        <li>Capuccino</li>
+        <li>Mocha</li>
+        <li>Chocolate quente</li>
+      </ul>
 
-<!-- Quarta sessão (Como Funciona) -->
-<section id="como-funciona">
-  <div class="como-header reveal">
-    <h2 class="section-title">Como funciona?</h2>
+      <div class="cafes-image">
+        <img src="./assets/copoImg.png" alt="COFEBOT" />
+      </div>
+
+      <ul class="cafes-list cafes-list--right">
+        <li>Latte</li>
+        <li>Matcha</li>
+        <li>Macchiato de caramelo</li>
+        <li>Iced latte</li>
+        <li>Café com chá verde</li>
+      </ul>
+    </div>
+    <div class="cafes-header reveal">
+      <p class="hero-subtitle">O cardápio pode ser ajustado conforme o ponto, o público e a operação.</p>
+    </div>
+  </section>
+
+  <!-- Quarta sessão (Diferenciais) -->
+  <section id="diferenciais">
+    <div class="diferenciais-header reveal">
+      <h2 class="section-title">Foto, logo ou mensagem na espuma do café</h2>
+      <img src="./assets/3d_latteart.png" alt="Exemplo de personalização da espuma do café"
+        class="diferenciais-image" />
+      <p class="section-subtitle">
+        O Cofebot pode imprimir imagens na espuma do café. Um detalhe simples para o cliente, e um recurso forte para
+        marcas, eventos e ativações.
+      </p>
+    </div>
+    <div class="diferenciais-grid reveal">
+      <div class="diferencial-card">
+        <h4 class="dif-title">Para clientes</h4>
+        <p>Fotos, mensagens e desenhos aplicados direto na bebida.</p>
+      </div>
+      <div class="diferencial-card">
+        <h4 class="dif-title">Para marcas</h4>
+        <p>Logos, campanhas e ativações impressas na espuma.</p>
+      </div>
+      <div class="diferencial-card">
+        <h4 class="dif-title">Para eventos</h4>
+        <p>Bebidas personalizadas para ações promocionais, lançamentos e experiências de marca.</p>
+      </div>
+      <div class="diferencial-card">
+        <h4 class="dif-title">Para o PDV</h4>
+        <p>Um recurso visual que chama atenção, gera registro espontâneo e aumenta a interação com o quiosque.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quinta sessão (Como Funciona) -->
+  <section id="como-funciona">
+    <div class="como-header reveal">
+      <h2 class="section-title">COMO FUNCIONA</h2>
+      <p class="section-sub">
+        O cliente escolhe, paga e retira. O Cofebot prepara.
+      </p>
+    </div>
+    <div class="steps-grid reveal">
+      <div class="step-card">
+        <div class="step-num"><img src="./assets/icons/coffeeIcon.svg" alt="ícone de café"></div>
+        <div class="step-icon"></div>
+        <div class="step-title">Escolha na tela</div>
+        <p class="step-desc">O cliente seleciona a bebida e personaliza o pedido.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><img src="./assets/icons/credit-card.svg" alt="ícone de cartão de crédito"></div>
+        <div class="step-icon"></div>
+        <div class="step-title">Pagamento digital</div>
+        <p class="step-desc">O pagamento é feito direto no quiosque.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><img src="./assets/icons/bot.svg" alt="ícone de robô"></div>
+        <div class="step-icon"></div>
+        <div class="step-title">Preparo robótico</div>
+        <p class="step-desc">O Cofe prepara a bebida na hora, com medida e temperatura controladas.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><img src="./assets/icons/cupIcon.svg" alt="ícone de xícara"></div>
+        <div class="step-icon"></div>
+        <div class="step-title">Retirada no balcão</div>
+        <p class="step-desc">A bebida fica pronta no ponto indicado.</p>
+      </div>
+    </div>
+    <div class="como-footer reveal">
+      <img src="./assets/imgs_galery/1-choose.jpg" alt="Ilustração de funcionamento do Cofebot"
+        class="como-footer-image" />
+      <img src="./assets/imgs_galery/2-prepare.png" alt="Ilustração de funcionamento do Cofebot"
+        class="como-footer-image" />
+      <img src="./assets/imgs_galery/3-grab.png" alt="Ilustração de funcionamento do Cofebot"
+        class="como-footer-image" />
+  </section>
+
+  <!-- Sexta sessão (Onde instalar) -->
+  <section id="onde-instalar">
+    <div class="onde-header reveal">
+      <h2 class="hero-title">ONDE INSTALAR</h2>
+      <p class="hero-subtitle">Feita para ambientes de alto fluxo.</p>
+      <div class="onde-instalar-imgs">
+        <div class="onde-footer-image1">
+          <img src="./assets/imgs_galery/shopping.png" alt="Ilustração de onde instalar o Cofebot"
+            class="onde-footer-image" />
+          <img src="./assets/imgs_galery/aeroporto.png" alt="Ilustração de onde instalar o Cofebot"
+            class="onde-footer-image" />
+        </div>
+        <div class="onde-footer-image2">
+          <img src="./assets/imgs_galery/centro-corporativo.png" alt="Ilustração de onde instalar o Cofebot"
+            class="onde-footer-image" />
+          <img src="./assets/imgs_galery/universidade.png" alt="Ilustração de onde instalar o Cofebot"
+            class="onde-footer-image" />
+        </div>
+      </div>
+    </div>
+    <div class="instalar-showcase reveal">
+      <p class="instalar-subtitle">O Cofebot funciona melhor em locais com circulação constante, demanda por conveniência e pouco espaço para uma cafeteria tradicional.</p>
+      <ul class="instalar-list">
+        <li>Shoppings</li>
+        <li>Aeroportos</li>
+        <li>Hospitais</li>
+        <li>Universidades</li>
+        <li>Prédios corporativos</li>
+        <li>Hubs de transporte</li>
+        <li>Varejo</li>
+        <li>Eventos e ativações</li>
+      </ul>
+    </div>
+    </div>
+  </section>
+
+  <!-- Sétima sessão (Operação) -->
+  <section id="operacao">
+    <div class="operacao-header reveal">
+      <h2 class="operacao-title">OPERAÇÃO</h2>
+      <h3 class="operacao-subtitle">Uma operação de café sem estrutura tradicional de cafeteria.</h3>
+      <p>Menos área, menos equipe fixa e mais controle sobre a operação.</p>
+    </div>
+    <div class="operacao-showcase reveal">
+      <ul class="operacao-list">
+        <li>Operação automatizada</li>
+        <li>Sem necessidade de barista fixo no ponto</li>
+        <li>Controle remoto de status e abastecimento</li>
+        <li>Instalação em formato compacto</li>
+        <li>Preparo visível para atrair atenção no ponto</li>
+        <li>Modelo adaptável para diferentes espaços comerciais</li>
+      </ul>
+      <img src="./assets/imgs_galery/government-scaled.jpg" alt="Ilustração de operação do Cofebot" class="operacao-image reveal" />
+    </div>
+  </section>
+
+
+  <!-- Oitava sessão (Mídia) -->
+  <section id="midias">
+    <div class="midias-header reveal">
+      <div class="midias-header-top">
+        <h2 class="section-title">COFEBOT PELO MUNDO</h2>
+      </div>
+    </div>
     <p class="section-sub">
-      Do pedido ao copo em poucos segundos. Veja como seu café é preparado.
+      O Cofebot já está presente em mais de 50 países, com mais de 500 parceiros
     </p>
-  </div>
-  <div class="steps-grid reveal">
-    <div class="step-card">
-      <div class="step-num"><img src="./assets/icons/coffeeIcon.svg" alt="ícone de café"></div>
-      <div class="step-icon"></div>
-      <div class="step-title">Escolha sua bebida</div>
-      <p class="step-desc">Toque na tela e selecione entre mais de 20 opções de bebidas quentes e geladas.</p>
+    <div class="midias-grid reveal">
+      <div class="media-card big m1">
+        <div class="media-inner">
+          <img src="./assets/imgs_galery/cofebot-galery-1.png" alt="COFEBOT em shopping" />
+        </div>
+      </div>
+      <div class="media-card m2">
+        <div class="media-inner">
+          <img src="./assets/imgs_galery/cofebot-galery-2.jpg" alt="COFEBOT em aeroporto" />
+        </div>
+      </div>
+      <div class="media-card m3">
+        <div class="media-inner">
+          <img src="./assets/imgs_galery/cofebot-galery-3.jpg" alt="COFEBOT em escritório" />
+        </div>
+      </div>
+      <div class="media-card m4">
+        <div class="media-inner">
+          <img src="./assets/imgs_galery/cofebot-galery-4.jpg" alt="COFEBOT em evento" />
+        </div>
+      </div>
+      <div class="media-card m5">
+        <div class="media-inner">
+          <img src="./assets/imgs_galery/cofebot-galery-5.png" alt="COFEBOT em café" />
+        </div>
+      </div>
     </div>
-    <div class="step-card">
-      <div class="step-num"><img src="./assets/icons/milkIcon.svg" alt="ícone de leite"></div>
-      <div class="step-icon"></div>
-      <div class="step-title">Personalize do seu jeito</div>
-      <p class="step-desc">Ajuste intensidade, açúcar, temperatura e tamanho com um toque.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num"><img src="./assets/icons/bot.svg" alt="ícone de robô"></div>
-      <div class="step-icon"></div>
-      <div class="step-title">O robô prepara</div>
-      <p class="step-desc">A tecnologia COFEBOT garante pressão, temperatura e tempo ideais para cada receita.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num"><img src="./assets/icons/cupIcon.svg" alt="ícone de xícara"></div>
-      <div class="step-icon"></div>
-      <div class="step-title">Aproveite</div>
-      <p class="step-desc">Sua bebida fica pronta em até 40 segundos. Sem espera, sem atendente.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Quinta sessão (Galeria) -->
-<section id="midias">
-  <div class="midias-header reveal">
-    <div>
-      <h2 class="section-title">Galeria</h2>
+  <!-- Nona sessão (Contato) -->
+  <section id="contato">
+    <div class="contato-header reveal">
+      <h2 class="section-title">Quer levar a COFEBOT para o seu espaço?</h2>
+      <p class="section-sub">
+        Fale com a nossa equipe para receber a apresentação comercial e entender os formatos de investimento e
+        implantação no Brasil.
+      </p>
     </div>
-    <p class="section-sub">
-      Veja o Cofe em shopping, aeroporto e espaços corporativos.
-    </p>
-  </div>
-  <div class="midias-grid reveal">
-    <div class="media-card big m1">
-      <div class="media-inner">
-        <img src="./assets/imgs_galery/cofebot-galery-1.png" alt="COFEBOT em shopping" />
+    <div class="contato-grid reveal">
+      <div class="contato-info">
+        <div class="info-item">
+          <div class="info-icon"><img src="./assets/icons/mapIcon.svg" alt="ícone de localização"></div>
+          <div class="info-text">
+            <h4>Localização</h4>
+            <p>Vitória, ES<br />Atendemos todo o território nacional</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><img src="./assets/icons/userIcon.svg" alt="ícone de contato"></div>
+          <div class="info-text">
+            <h4>Contato</h4>
+            <p>(27)99750-6677</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><img src="./assets/icons/mailIcon.svg" alt="ícone de e-mail"></div>
+          <div class="info-text">
+            <h4>E-mail</h4>
+            <p>comercial@cofebot.com.br</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><img src="./assets/icons/clockIcon.svg" alt="ícone de horário"></div>
+          <div class="info-text">
+            <h4>Atendimento</h4>
+            <p>Segunda a sexta, das 9h às 18h</p>
+          </div>
+        </div>
+        <div>
+          <p class="social-label">Redes sociais</p>
+          <div class="social-row">
+            <a href="https://www.instagram.com/cofebot.br/?hl=pt-br" class="social-btn" title="Instagram">
+              <img src="./assets/icons/instagramIcon.svg" alt="Instagram" class="social-btn-image">
+            </a>
+            <a href="#" class="social-btn" title="TikTok">
+              <img src="./assets/icons/tiktokIcon.svg" alt="TikTok" class="social-btn-image">
+            </a>
+            <a href="https://www.linkedin.com/company/cofebot/posts/?feedView=all" class="social-btn" title="LinkedIn">
+              <img src="./assets/icons/linkedinIcon.svg" alt="LinkedIn" class="social-btn-image">
+            </a>
+            <a href="https://www.youtube.com/channel/UCWFndvs5Zt84Rt_GNMYz2EA" class="social-btn" title="YouTube">
+              <img src="./assets/icons/youtubeIcon.svg" alt="YouTube" class="social-btn-image">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contato-form">
+        <h3>Pedir orçamento</h3>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" />
+            </div>
+            <div class="form-group">
+              <label for="cargo">Cargo</label>
+              <input type="text" id="cargo" name="cargo" placeholder="Seu cargo" />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="celular">Celular</label>
+              <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="espaco">Tipo de espaço</label>
+            <select id="espaco" name="espaco">
+              <option value="">Selecione...</option>
+              <option>Escritório / Empresa</option>
+              <option>Hotel / Pousada</option>
+              <option>Academia / Spa</option>
+              <option>Coworking</option>
+              <option>Restaurante / Café</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte mais sobre seu espaço..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">RECEBER CONTATO DA EQUIPE</button>
+        </form>
       </div>
     </div>
-    <div class="media-card m2">
-      <div class="media-inner">
-        <img src="./assets/imgs_galery/cofebot-galery-2.jpg" alt="COFEBOT em aeroporto" />
-      </div>
-    </div>
-    <div class="media-card m3">
-      <div class="media-inner">
-        <img src="./assets/imgs_galery/cofebot-galery-3.jpg" alt="COFEBOT em escritório" />
-      </div>
-    </div>
-    <div class="media-card m4">
-      <div class="media-inner">
-        <img src="./assets/imgs_galery/cofebot-galery-4.jpg" alt="COFEBOT em evento" />
-      </div>
-    </div>
-    <div class="media-card m5">
-      <div class="media-inner">
-        <img src="./assets/imgs_galery/cofebot-galery-5.png" alt="COFEBOT em café" />
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Sexta sessão (Contato) -->
-<section id="contato">
-  <div class="contato-header reveal">
-    <h2 class="section-title">Vamos conversar?</h2>
-    <p class="section-sub">
-      Quer levar a COFEBOT para o seu espaço? Entre em contato e peça um orçamento.
-    </p>
-  </div>
-  <div class="contato-grid reveal">
-    <div class="contato-info">
-      <div class="info-item">
-        <div class="info-icon"><img src="./assets/icons/mapIcon.svg" alt="ícone de localização"></div>
-        <div class="info-text">
-          <h4>Localização</h4>
-          <p>Vitória, ES<br />Atendemos todo o território nacional</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon"><img src="./assets/icons/userIcon.svg" alt="ícone de contato"></div>
-        <div class="info-text">
-          <h4>Contato</h4>
-          <p>(27)99750-6677</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon"><img src="./assets/icons/mailIcon.svg" alt="ícone de e-mail"></div>
-        <div class="info-text">
-          <h4>E-mail</h4>
-          <p>cofebot@akostrading.com.br</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon"><img src="./assets/icons/clockIcon.svg" alt="ícone de horário"></div>
-        <div class="info-text">
-          <h4>Atendimento</h4>
-          <p>Segunda a sexta, das 9h às 18h</p>
-        </div>
-      </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
       <div>
-        <p class="social-label">Redes sociais</p>
-        <div class="social-row">
-          <a href="https://www.instagram.com/cofebot.br/?hl=pt-br" class="social-btn" title="Instagram">
-            <img src="./assets/icons/instagramIcon.svg" alt="Instagram" class="social-btn-image">
-          </a>
-          <a href="#" class="social-btn" title="TikTok">
-            <img src="./assets/icons/tiktokIcon.svg" alt="TikTok" class="social-btn-image">
-          </a>
-          <a href="https://www.linkedin.com/company/cofebot/posts/?feedView=all" class="social-btn" title="LinkedIn">
-            <img src="./assets/icons/linkedinIcon.svg" alt="LinkedIn" class="social-btn-image">
-          </a>
-          <a href="https://www.youtube.com/channel/UCWFndvs5Zt84Rt_GNMYz2EA" class="social-btn" title="YouTube">
-            <img src="./assets/icons/youtubeIcon.svg" alt="YouTube" class="social-btn-image">
-          </a>
+        <div class="footer-logo">
+          <img src="assets/cofebot_logo_simples_branco.png" alt="COFEBOT" />
         </div>
+        <div class="footer-tagline">Marca brasileira da rede global COFE+.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Início</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#onde-instalar">Onde instalar</a>
+        <a href="#operacao">Operação</a>
+        <a href="#contato">Contato</a>
       </div>
     </div>
-    <div class="contato-form">
-      <h3>Pedir orçamento</h3>
-      <form>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-          </div>
-          <div class="form-group">
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa"/>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required/>
-          </div>
-          <div class="form-group">
-            <label for="whatsapp">WhatsApp</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="espaco">Tipo de espaço</label>
-          <select id="espaco" name="espaco">
-            <option value="">Selecione...</option>
-            <option>Escritório / Empresa</option>
-            <option>Hotel / Pousada</option>
-            <option>Academia / Spa</option>
-            <option>Coworking</option>
-            <option>Restaurante / Café</option>
-            <option>Outro</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Conte mais sobre seu espaço..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">ENVIAR</button>
-      </form>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 COFEBOT. Todos os direitos reservados.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Footer -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-logo">
-        <img src="assets/cofebot_logo_principal_branco.png" alt="COFEBOT" />
-      </div>
-      <div class="footer-tagline">Mais de 20 bebidas. Preparo em 40s. Sem atendente.</div>
-    </div>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#conheca">Conheça</a>
-      <a href="#cafes">Cafés</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#midias">Galeria</a>
-      <a href="#contato">Contato</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2026 COFEBOT. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  <a href="https://wa.me/5527997506677" target="_blank" class="floating-wa" title="WhatsApp">
+    <img src="./assets/icons/whatsappIcon.svg" alt="WhatsApp" class="floating-btn-image">
+  </a>
 
-<a href="https://wa.me/5527997506677" target="_blank" class="floating-wa" title="WhatsApp">
-  <img src="./assets/icons/whatsappIcon.svg" alt="WhatsApp" class="floating-btn-image">
-</a>
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8EItVpUJDPqa_Qs54axkQooEiz1G582au2d5-oGhAf_7NyPQ1jCr2bz4A7j3rr-k5/exec';
 
-<script>
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8EItVpUJDPqa_Qs54axkQooEiz1G582au2d5-oGhAf_7NyPQ1jCr2bz4A7j3rr-k5/exec';
+    document.querySelector('form').addEventListener('submit', async function (e) {
+      e.preventDefault();
 
-  document.querySelector('form').addEventListener('submit', async function (e) {
-    e.preventDefault();
+      const btnSubmit = document.querySelector('.btn-submit');
+      const textoOriginal = btnSubmit.textContent;
+      btnSubmit.textContent = 'Enviando...';
+      btnSubmit.disabled = true;
 
-    const btnSubmit = document.querySelector('.btn-submit');
-    const textoOriginal = btnSubmit.textContent;
-    btnSubmit.textContent = 'Enviando...';
-    btnSubmit.disabled = true;
+      const payload = {
+        nome: document.getElementById('nome').value.trim(),
+        empresa: document.getElementById('empresa').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        whatsapp: document.getElementById('whatsapp').value.trim(),
+        tipoEspaco: document.getElementById('espaco').value,
+        mensagem: document.getElementById('mensagem').value.trim()
+      };
 
-    const payload = {
-      nome: document.getElementById('nome').value.trim(),
-      empresa: document.getElementById('empresa').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      whatsapp: document.getElementById('whatsapp').value.trim(),
-      tipoEspaco: document.getElementById('espaco').value,
-      mensagem: document.getElementById('mensagem').value.trim()
-    };
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: JSON.stringify(payload)
+        });
 
-    try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(payload)
-      });
+        btnSubmit.textContent = 'Mensagem enviada!';
+        btnSubmit.style.background = '#1da46a';
+        btnSubmit.style.color = '#f0fdf5';
+        this.reset();
+        setTimeout(() => {
+          btnSubmit.textContent = textoOriginal;
+          btnSubmit.style.background = '';
+          btnSubmit.disabled = false;
+        }, 3000);
 
-      btnSubmit.textContent = 'Mensagem enviada!';
-      btnSubmit.style.background = '#1da46a';
-      btnSubmit.style.color = '#f0fdf5';
-      this.reset();
-      setTimeout(() => {
+      } catch (err) {
+        console.error('Erro ao enviar:', err);
+        alert('Não foi possível enviar. Verifique sua conexão e tente novamente.');
         btnSubmit.textContent = textoOriginal;
-        btnSubmit.style.background = '';
         btnSubmit.disabled = false;
-      }, 3000);
-
-    } catch (err) {
-      console.error('Erro ao enviar:', err);
-      alert('Não foi possível enviar. Verifique sua conexão e tente novamente.');
-      btnSubmit.textContent = textoOriginal;
-      btnSubmit.disabled = false;
-    }
-  });
-
-  document.querySelectorAll('.media-card').forEach(card => {
-    const video = card.querySelector('video');
-    if (!video) return;
-    card.addEventListener('mouseenter', () => video.play());
-    card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-  });
-
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-        history.replaceState(null, '', '/');
       }
     });
-  });
 
-  const sections = document.querySelectorAll('section[id]');
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        history.replaceState(null, '', '/');
-      }
+    document.querySelectorAll('.media-card').forEach(card => {
+      const video = card.querySelector('video');
+      if (!video) return;
+      card.addEventListener('mouseenter', () => video.play());
+      card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
     });
-  }, { threshold: 0.4 });
-  sections.forEach(s => sectionObserver.observe(s));
-</script>
 
-<!-- <div id="manutencao" style="
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          history.replaceState(null, '', '/');
+        }
+      });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          history.replaceState(null, '', '/');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => sectionObserver.observe(s));
+  </script>
+
+  <!-- <div id="manutencao" style="
   position: fixed; inset: 0; z-index: 9999;
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   background: rgba(0, 0, 0, 0.55);
@@ -428,4 +532,5 @@
 </div> -->
 
 </body>
+
 </html>

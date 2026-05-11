@@ -78,7 +78,6 @@
   /* Conheça */
   .conheca-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
   .conheca-grid .conheca-visual { order: -1; }
-  .float-badge  { bottom: -1rem; right: -0.5rem; }
   /* Cafés */
   .cafes-showcase       { grid-template-columns: 1fr; justify-items: center; }
   .cafes-image          { width: 14rem; order: -1; }
