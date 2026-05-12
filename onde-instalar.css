@@ -30,24 +30,38 @@
 }
 
 .instalar-subtitle{
-    font-size: 1.3rem;
-    font-weight: 300;
-    text-align: justify;
-    line-height: 1.75;
-    color: var(--color-text-secondary);
-}
-
-.instalar-list{
-  list-style: none;
-  font-family: var(--font-principal);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .08em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.75;
   color: var(--color-text-secondary);
-  cursor: default;
-  transition: color var(--ease), padding var(--ease);
 }
 
-.instalar-list li {
-  padding: 0.5rem 0;
+.instalar-list1 {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-content: center;
+  padding: 4rem 0 0 0;
+  font-weight: bolder;
+  letter-spacing: .09rem;
+  font-size: 1.1rem;
+  list-style: none;
+  color: var(--color-primary);
+}
+
+.instalar-list2 {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-content: center;
+  padding: 4rem 0 0 0;
+  font-weight: bolder;
+  letter-spacing: .09rem;
+  font-size: 1.1rem;
+  list-style: none;
+  color: var(--color-primary);
 }
