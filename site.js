@@ -14,7 +14,7 @@ function doPost(e) {
     ]);
     
     MailApp.sendEmail({
-      to: 'jvictor.ncn@gmail.com',
+      to: 'comercial@cofebot.com.br',
       subject: 'Novo contato: ' + dados.nome,
       body:
         'Nome: '        + dados.nome       + '\n' +

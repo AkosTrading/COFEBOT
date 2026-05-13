@@ -58,7 +58,7 @@ a   { text-decoration: none; color: inherit; }
 }
 
 .btn-primary {
-  background: var(--color-primary-dark);
+  background: var(--color-terciary);
   color: var(--color-text-primary);
   font-family: var(--font-principal);
   font-weight: 700;
@@ -75,8 +75,8 @@ a   { text-decoration: none; color: inherit; }
   white-space: nowrap;
 }
 .btn-primary:hover {
-  background: var(--color-text-primary);
-  color: var(--color-primary-dark);
+  background: var(--color-primary-dark);
+  color: var(--color-text-primary);
   transform: translateY(-0.1875rem);
 }
 
