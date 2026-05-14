@@ -93,3 +93,12 @@
   border-radius: var(--radius); 
   object-fit: cover; 
 }
+
+.funciona-sub{
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 100%;
+}

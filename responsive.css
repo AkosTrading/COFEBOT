@@ -1,19 +1,10 @@
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+html, body { max-width: 100%; overflow-x: hidden; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+img { max-width: 100%; height: auto; display: block; }
 
 p, h1, h2, h3, h4, li, a {
   overflow-wrap: break-word;
@@ -23,59 +14,41 @@ p, h1, h2, h3, h4, li, a {
 @media (max-width: 64rem) {
   .steps-grid         { grid-template-columns: repeat(2, 1fr); }
   .steps-grid::before { display: none; }
-
   .cafes-showcase     { gap: 1.5rem; }
   .cafes-image        { width: 16rem; }
-
   .conheca-grid       { gap: 2.5rem; }
-
   .diferenciais-grid  { gap: 3rem; }
-
   .operacao-showcase  { flex-direction: column; }
   .operacao-image     { max-width: 100%; max-height: unset; }
 }
 
 @media (max-width: 48rem) {
 
-  body,
-  p,
-  .hero-subtitle,
-  .instalar-subtitle { text-align: left; }
+  body, p, .hero-subtitle, .instalar-subtitle { text-align: left; }
 
   .nav-links { display: none; }
   .nav-cta   { display: none; }
   .hamburger { display: flex; }
+
+  section { padding: 3rem 5vw; }
 
   #home {
     min-height: unset;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 5.5rem 5vw 3rem;
+    padding: 5.5rem 5vw 2.5rem;
     gap: 1rem;
   }
-  .robot-icon {
-    order: -1;
-    width: 80%;
-    margin: 0 auto;
-  }
-  .hero-content {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-title    { text-align: center; }
-  .hero-subtitle { text-align: center; max-width: 100%; }
-  .hero-actions  { justify-content: center; flex-wrap: wrap; }
+  .robot-icon         { order: -1; width: 80%; margin: 0 auto; }
+  .hero-content       { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .hero-title         { text-align: center; }
+  .hero-subtitle      { text-align: center; max-width: 100%; margin-bottom: 1.25rem; }
+  .hero-actions       { justify-content: center; flex-wrap: wrap; }
 
   .topbar-toggle-input:checked ~ .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    position: fixed;
-    top: 4.5rem;
-    left: 0; right: 0;
+    display: flex; flex-direction: column; gap: 0;
+    position: fixed; top: 4.5rem; left: 0; right: 0;
     background: var(--color-primary-dark);
     backdrop-filter: blur(1rem);
     padding: 0.5rem 6vw 1.5rem;
@@ -83,117 +56,141 @@ p, h1, h2, h3, h4, li, a {
     border-top: 1px solid rgba(255,255,255,.15);
   }
   .topbar-toggle-input:checked ~ .nav-links li a {
-    display: block;
-    padding: 0.875rem 0;
-    font-size: 0.95rem;
+    display: block; padding: 0.875rem 0; font-size: 0.95rem;
     border-bottom: 1px solid rgba(255,255,255,.08);
     color: rgba(255,255,255,.85);
   }
-  .topbar-toggle-input:checked ~ .nav-links .nav-mobile-cta {
-    display: list-item;
-    padding-top: 0.75rem;
-  }
+  .topbar-toggle-input:checked ~ .nav-links .nav-mobile-cta { display: list-item; padding-top: 0.75rem; }
   .topbar-toggle-input:checked ~ .nav-links .nav-mobile-cta a {
-    display: block;
-    background: var(--color-text-primary);
-    color: var(--color-primary);
-    border-radius: 99px;
-    text-align: center;
-    font-family: var(--font-principal);
-    font-weight: 700;
-    padding: 0.75rem 1.5rem;
+    display: block; background: var(--color-text-primary); color: var(--color-primary);
+    border-radius: 99px; text-align: center; font-family: var(--font-principal);
+    font-weight: 700; padding: 0.75rem 1.5rem;
   }
 
-  section { padding: 4rem 5vw; }
-
-  #conheca { padding: 4rem 5vw 3rem; }
-  .conheca-primeiro-bloco  { flex-direction: column; gap: 2rem; }
-  .conheca-segundo-bloco   { padding-top: 2rem; gap: 2rem; }
-  .conheca-header-b2       { padding-left: 0; gap: 1.5rem; align-items: flex-start; }
+  #conheca                 { padding: 3rem 5vw 2.5rem; }
+  .conheca-img             { width: calc(100% + 10vw); margin-left: -5vw; margin-right: -5vw; }
+  .conheca-primeiro-bloco  { flex-direction: column; gap: 1.5rem; }
+  .conheca-segundo-bloco   { padding-top: 1.5rem; gap: 1.5rem; }
+  .conheca-header-b2       { padding-left: 0; gap: 1rem; align-items: flex-start; }
   .conheca-b2              { flex-direction: column; }
   .conheca-robo-image      { width: 100%; }
-  .features-list           { grid-template-columns: 1fr; gap: 0; }
-  .feat-text               { padding: 1.25rem 0 0 0; }
-  .feat-p1, .feat-p2       { display: flex; flex-direction: column; }
+  .features-list           { grid-template-columns: 1fr; gap: 0;}
+  .feat-text               { padding: 0.875rem 0 0 0; }
+  .feat-p1, .feat-p2       { display: flex; flex-direction: column;}
 
-  #cafes                 { padding: 4rem 5vw; }
-  .cafes-showcase        { grid-template-columns: 1fr; justify-items: center; }
-  .cafes-list li         { padding: 0.9rem 0; font-size: 0.95rem; }
-  .cafes-image           { width: min(16rem, 60%); margin: 0 auto; }
+  #cafes                   { padding: 3rem 5vw; }
+  .cafes-header            { margin-bottom: 1.5rem; }
+  .cafes-showcase          { grid-template-columns: 1fr; justify-items: center; gap: 0; margin-bottom: 2rem; }
+  .cafes-image             { width: min(14rem, 55%); order: -1; margin-bottom: 0.5rem; }
   .cafes-list--left,
-  .cafes-list--right     { width: 100%; text-align: left; }
+  .cafes-list--right       { width: 100%; text-align: left; }
+  .cafes-list li           { padding: 0.9rem 0; }
   .cafes-list--right li:hover { padding-left: 0.375rem; padding-right: 0; }
 
-  #diferenciais          { padding: 0 5vw 4rem; }
-  .diferenciais-grid     { flex-direction: column; gap: 2rem; padding: 1rem 0 0; }
-  .diferenciais-image    { width: 100%; }
-  .diferenciais-subtitle { font-size: 1rem; }
+  #diferenciais            { padding: 0 5vw 3rem; }
+  .diferenciais-header     { margin-bottom: 1.5rem; }
+  .diferenciais-image      { width: 100%; padding: 2rem 0 1rem; }
+  .diferenciais-subtitle   { font-size: 1rem; padding-bottom: 1.5rem; }
+  .diferenciais-grid       { flex-direction: column; gap: 1.5rem; padding: 0; }
+  .diferencial-card   {text-align: center; }
+  .diferencial-card p { text-align: center; }
 
-  #como-funciona         { padding: 4rem 5vw; }
-  .steps-grid            { grid-template-columns: repeat(2, 1fr); }
-  .como-footer           { flex-direction: column; }
-  .como-footer-image     { width: 100%; height: auto; }
+  #como-funciona           { padding: 3rem 5vw; }
+  .funciona-sub              { text-align: center;}
+  .steps-grid              { grid-template-columns: repeat(2, 1fr);}
+  .como-footer             { flex-direction: column; padding-top: 2rem; }
+  .como-footer-image       { width: 100%; height: auto; }
 
-  #onde-instalar          { padding: 4rem 5vw; }
+  #onde-instalar           { padding: 3rem 5vw; }
   .onde-instalar-imgs,
   .onde-footer-image1,
-  .onde-footer-image2     { flex-direction: column; width: 100%; }
-  .onde-footer-image      { width: 100%; height: auto; }
+  .onde-footer-image2      { flex-direction: column; width: 100%; }
+  .onde-footer-image       { width: 100%; height: auto; }
   .instalar-list1,
-  .instalar-list2         { flex-direction: column; gap: 0.5rem; padding-top: 1.5rem; font-size: 1rem; }
+  .instalar-list2          { flex-direction: column; gap: 0.4rem; padding-top: 1.25rem; font-size: 1rem; }
 
-  #operacao              { padding: 4rem 5vw; }
-  .operacao-title        { font-size: clamp(1.6rem, 5vw, 2.2rem); }
-  .operacao-showcase     { flex-direction: column; padding-top: 2rem; }
-  .operacao-image        { width: 100%; max-width: 100%; max-height: unset; }
-  .operacao-list         { padding: 1rem 0; }
+  #operacao                { padding: 3rem 5vw; }
+  .operacao-title          { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+  .operacao-showcase       { flex-direction: column; padding-top: 1.5rem; }
+  .operacao-image          { width: 100%; max-width: 100%; max-height: unset; }
+  .operacao-list           { padding: 0.5rem 0; }
+  .operacao-list li        { padding: 0.75rem; }
 
-  .midias-grid     { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-  .media-card.big              { aspect-ratio: 16/9; }
-.media-card.big .media-inner img { object-position: center center; }
+  #midias                  { padding: 3rem 5vw; }
+  .midias-header           { margin-bottom: 0.5rem; }
+  .midias-grid             { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-top: 1.5rem; }
+  .media-card.big          { grid-column: span 2; aspect-ratio: 16/9; }
+  .media-card.big .media-inner img { object-position: center center; }
+  .media-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 
-  .contato-grid { grid-template-columns: 1fr; }
-  .form-row     { grid-template-columns: 1fr; }
+  #contato                 { padding: 3rem 5vw; }
+  .contato-header          { padding-bottom: 1rem; }
+  .contato-grid            { grid-template-columns: 1fr; margin-top: 2rem; }
+  .form-row                { grid-template-columns: 1fr; }
 
+  /* ── Footer ── */
   .footer-inner  { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
   .footer-links  { gap: 1rem; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
+/* ── 480px — Celular comum ───────────────── */
 @media (max-width: 30rem) {
 
-  section { padding: 3.5rem 4vw; }
+  section { padding: 2.5rem 4vw; }
 
-  #home { padding: 5.5rem 4vw 3rem; }
+  /* Hero */
+  #home           { padding: 5.5rem 4vw 2rem; }
   .hero-actions   { flex-direction: column; gap: 0.75rem; }
   .hero-actions a { text-align: center; width: 100%; }
 
-  #cafes { padding: 3.5rem 4vw; }
-  .cafes-list li { padding: 0.75rem 0; }
-  .cafes-image { width: min(12rem, 55%); }
-  .steps-grid { grid-template-columns: 1fr; }
+  /* Conheça */
+  #conheca        { padding: 0 4vw 2rem; }
+  .conheca-img    { width: calc(100% + 8vw); margin-left: -4vw; margin-right: -4vw; }
 
-  .midias-grid                 { grid-template-columns: 1fr; }
-  .media-card.big              { grid-column: span 1; }
-  .media-card.big .media-inner { aspect-ratio: 1; }
+  /* Cafés */
+  #cafes          { padding: 2.5rem 4vw; }
+  .cafes-list li  { font-size: .9rem; padding: .75rem 0; }
 
+  /* Diferenciais */
+  #diferenciais   { padding: 0 4vw 2.5rem; }
+
+  /* Como funciona */
+  #como-funciona  { padding: 2.5rem 4vw; }
+  .steps-grid     { grid-template-columns: 1fr; }
+
+  /* Onde instalar */
+  #onde-instalar  { padding: 2.5rem 4vw; }
+
+  /* Operação */
+  #operacao       { padding: 2.5rem 4vw; }
+
+  /* Mídias */
+  #midias         { padding: 2.5rem 4vw; }
+  .midias-grid    { grid-template-columns: 1fr; }
+  .media-card.big { grid-column: span 1; aspect-ratio: 4/3; }
+
+  /* Contato */
+  #contato        { padding: 2.5rem 4vw; }
   .contato-form   { padding: 1.5rem; }
-  .contato-header { padding: 0 0.5rem; }
+  .contato-header { padding: 0; }
 
+  /* Footer */
   .footer-inner  { align-items: center; text-align: center; }
   .footer-links  { justify-content: center; }
   .footer-bottom { align-items: center; text-align: center; }
 
+  /* WhatsApp flutuante */
   .floating-wa { bottom: 1rem; right: 1rem; width: 3rem; height: 3rem; font-size: 1.3rem; }
 }
 
+/* ── 320px — Celular pequeno (iPhone SE etc) ── */
 @media (max-width: 20rem) {
-  section { padding: 3rem 3vw; }
+  section { padding: 2rem 3vw; }
 
   .hero-title    { font-size: 1.5rem; }
   .hero-subtitle { font-size: 0.875rem; }
   .robot-icon    { width: 90%; }
-
   .cafes-image   { width: 10rem; }
   .contato-form  { padding: 1rem; }
 
