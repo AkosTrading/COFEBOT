@@ -149,8 +149,8 @@ p, h1, h2, h3, h4, li, a {
   .operacao-list         { padding: 1rem 0; }
 
   .midias-grid     { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-  .media-card.big { aspect-ratio: 4/3; }
-  .media-inner img { width: 100%; height: auto; object-fit: cover; }
+  .media-card.big              { aspect-ratio: 16/9; }
+.media-card.big .media-inner img { object-position: center center; }
 
   .contato-grid { grid-template-columns: 1fr; }
   .form-row     { grid-template-columns: 1fr; }
