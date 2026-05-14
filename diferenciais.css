@@ -38,6 +38,7 @@
 .diferencial-card {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   flex: 1;
 }
