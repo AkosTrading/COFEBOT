@@ -155,8 +155,6 @@
 .form-group textarea:focus,
 .form-group select:focus
 .form-group select option {
-  background: var(--color-primary);
-  color: var(--color-text-secondary);
   text-decoration: none;
 }
 .form-group textarea {

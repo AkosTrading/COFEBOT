@@ -2,26 +2,22 @@ function doPost(e) {
   try {
     var dados = JSON.parse(e.postData.contents);
     
-    var sheet = SpreadsheetApp.openById('1bao0ZleYUV6_GiBs3Es1AWC2X8oMUpzJrEQRBzCvhdw').getActiveSheet();
+    var sheet = SpreadsheetApp.openById('10dUxBSU3JzqiRg_KPnjlh0eKpEAokgp73ePutWQU-NY').getActiveSheet();
     sheet.appendRow([
       new Date(),
       dados.nome,
-      dados.empresa,
       dados.email,
-      dados.whatsapp,
-      dados.tipoEspaco,
+      dados.celular,
       dados.mensagem
     ]);
     
     MailApp.sendEmail({
-      to: 'comercial@cofebot.com.br',
+      to: 'contato@cofebot.com.br',
       subject: 'Novo contato: ' + dados.nome,
       body:
         'Nome: '        + dados.nome       + '\n' +
-        'Empresa: '     + dados.empresa    + '\n' +
         'E-mail: '      + dados.email      + '\n' +
-        'WhatsApp: '    + dados.whatsapp   + '\n' +
-        'Tipo de espaço: ' + dados.tipoEspaco + '\n\n' +
+        'Celular: '     + dados.celular    + '\n\n' +
         'Mensagem:\n'   + dados.mensagem
     });
     

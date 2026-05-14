@@ -238,7 +238,8 @@
       </div>
     </div>
     <div class="instalar-showcase reveal">
-      <p class="instalar-subtitle">O Cofebot funciona melhor em locais com circulação constante, demanda por conveniência e pouco espaço para uma cafeteria tradicional.</p>
+      <p class="instalar-subtitle">O Cofebot funciona melhor em locais com circulação constante, demanda por
+        conveniência e pouco espaço para uma cafeteria tradicional.</p>
       <ul>
         <div class="instalar-list1">
           <li>Shoppings</li>
@@ -273,7 +274,8 @@
         <li>Preparo visível para atrair atenção no ponto</li>
         <li>Modelo adaptável para diferentes espaços comerciais</li>
       </ul>
-      <img src="./assets/imgs_galery/government-scaled.jpg" alt="Ilustração de operação do Cofebot" class="operacao-image reveal" />
+      <img src="./assets/imgs_galery/government-scaled.jpg" alt="Ilustração de operação do Cofebot"
+        class="operacao-image reveal" />
     </div>
   </section>
 
@@ -362,9 +364,9 @@
             <a href="https://www.instagram.com/cofebot.br/?hl=pt-br" class="social-btn" title="Instagram">
               <img src="./assets/icons/instagramIcon.svg" alt="Instagram" class="social-btn-image">
             </a>
-            <a href="#" class="social-btn" title="TikTok">
+            <!-- <a href="#" class="social-btn" title="TikTok">
               <img src="./assets/icons/tiktokIcon.svg" alt="TikTok" class="social-btn-image">
-            </a>
+            </a> -->
             <a href="https://www.linkedin.com/company/cofebot/posts/?feedView=all" class="social-btn" title="LinkedIn">
               <img src="./assets/icons/linkedinIcon.svg" alt="LinkedIn" class="social-btn-image">
             </a>
@@ -428,7 +430,7 @@
   </a>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8EItVpUJDPqa_Qs54axkQooEiz1G582au2d5-oGhAf_7NyPQ1jCr2bz4A7j3rr-k5/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwieOj-iA8VsGW3Dv_JuMc0gMWW2O1D7OOR_7hWTOZZtSbsYgiGWvjQrNAB887_7LlIqA/exec';
 
     document.querySelector('form').addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -440,10 +442,8 @@
 
       const payload = {
         nome: document.getElementById('nome').value.trim(),
-        empresa: document.getElementById('empresa').value.trim(),
         email: document.getElementById('email').value.trim(),
-        whatsapp: document.getElementById('whatsapp').value.trim(),
-        tipoEspaco: document.getElementById('espaco').value,
+        celular: document.getElementById('celular').value.trim(),
         mensagem: document.getElementById('mensagem').value.trim()
       };
 
