@@ -2,7 +2,6 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-principal);
-  text-align: justify;
   font-weight: 500;
   background: #fff;
   color: var(--color-text-secondary);
