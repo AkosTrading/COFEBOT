@@ -9,7 +9,7 @@ nav {
   height: 4.5rem;
   background: var(--color-terciary);
   backdrop-filter: blur(1rem);
-  border-bottom: 1px solid rgba(0, 179, 204, 0.2);
+  border-bottom: 1px solid rgba(31, 42, 48, 0.10);
 }
 
 .topbar-logo img { height: 2.25rem; width: auto; }
@@ -60,7 +60,7 @@ nav {
   transition: var(--ease);
 }
 .nav-cta:hover {
-  background: var(--color-primary-dark);
+  background: var(--flux);
   transform: translateY(-0.0625rem);
 }
 

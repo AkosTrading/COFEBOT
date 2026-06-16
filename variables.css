@@ -35,8 +35,25 @@
   --color-primary-mid-dark:   #219da353;
   --color-secondary:      #61ebf2;
   --color-terciary:       #ffffff;
-  --color-text-primary:   #2d2d2d;
-  --color-text-secondary: #394043;
+  --color-text-primary:   #223038;
+  --color-text-secondary: rgba(31, 42, 48, 0.78);
+
+  --bruma: #D9F3F3;
+  --grafite-base: #1F2A30;
+
+  --flux: #007680;
+  --flash: #97D8E1;
+  --prisma: #40C6EF;
+
+  --bg: #F5FAFB;
+  --surface: #FFFFFF;
+  --surface-soft: #EEF7F8;
+  --border: rgba(31, 42, 48, 0.10);
+
+  --text: #223038;
+  --text-soft: rgba(31, 42, 48, 0.78);
+  --text-muted: rgba(31, 42, 48, 0.56);
+
 
   --font-principal: 'InterTight', sans-serif;
   --font-secondary: 'Inter', sans-serif;

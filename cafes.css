@@ -1,4 +1,4 @@
-#cafes { background: var(--color-terciary); padding: 15rem 4rem 4rem 4rem;}
+#cafes {padding: 15rem 4rem 4rem 4rem;}
 
 .cafes-header {
   display: flex;

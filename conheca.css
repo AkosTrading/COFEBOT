@@ -10,7 +10,7 @@
 }
 
 #conheca {
-  background: #ffffff; 
+  background: var(--color-terciary); 
   width: 100%;
   overflow: hidden;
   padding: 8rem 6rem 0 0.01rem;
@@ -64,7 +64,7 @@
   font-size: 1.55rem;
   font-weight: 900;
   line-height: 1.2;
-  color: var(--color-text-primary);
+  color: var(--text);
 }
 
 .features-list {
