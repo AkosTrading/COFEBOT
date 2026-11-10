@@ -8,6 +8,14 @@
   <title>COFEBOT</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="./assets/cofebot_simbolo_branco.png"/>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    .form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .form-status { min-height: 1.5em; margin-top: 0.75rem; font-size: 0.95rem; }
+    .form-status[data-tipo="erro"] { color: #9e2525; }
+    .form-status[data-tipo="sucesso"] { color: #147a4c; }
+    .form-status[data-tipo="info"] { color: #31444e; }
+  </style>
 </head>
 
 <body>
@@ -384,25 +392,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="contato-form">
         <h3>CONTATO</h3>
-        <form>
+        <form id="form-contato">
           <div class="form-row">
             <div class="form-group">
               <label for="nome">Nome</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" minlength="2" maxlength="120" required />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="254" required />
             </div>
             <div class="form-group">
               <label for="celular">Celular</label>
-              <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" />
+              <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" maxlength="30" />
             </div>
           </div>
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Conte mais sobre seu espaço..."></textarea>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte mais sobre seu espaço..." maxlength="3000"></textarea>
           </div>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Deixe este campo vazio</label>
+            <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" />
+          </div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAF7WlWdBLpVBNwXA"></div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           <button type="submit" class="btn-submit">RECEBER CONTATO DA EQUIPE</button>
         </form>
       </div>
@@ -436,34 +450,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwieOj-iA8VsGW3Dv_JuMc0gMWW2O1D7OOR_7hWTOZZtSbsYgiGWvjQrNAB887_7LlIqA/exec';
-
-    document.querySelector('form').addEventListener('submit', async function (e) {
+    document.getElementById('form-contato').addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      const btnSubmit = document.querySelector('.btn-submit');
+      const btnSubmit = this.querySelector('.btn-submit');
+      const status = document.getElementById('form-status');
       const textoOriginal = btnSubmit.textContent;
       btnSubmit.textContent = 'Enviando...';
       btnSubmit.disabled = true;
+      status.textContent = 'Verificando seu envio...';
+      status.dataset.tipo = 'info';
 
       const payload = {
         nome: document.getElementById('nome').value.trim(),
         email: document.getElementById('email').value.trim(),
         celular: document.getElementById('celular').value.trim(),
-        mensagem: document.getElementById('mensagem').value.trim()
+        mensagem: document.getElementById('mensagem').value.trim(),
+        website: document.getElementById('website').value.trim()
       };
 
       try {
-        await fetch(SCRIPT_URL, {
+        const telefone = payload.celular.replace(/\D/g, '');
+        if (payload.celular && !/^(\d{10}|\d{11}|55\d{10}|55\d{11})$/.test(telefone)) {
+          throw new Error('Confira o número de celular informado.');
+        }
+
+        const token = this.querySelector('[name="cf-turnstile-response"]')?.value;
+        if (!token) {
+          throw new Error('Conclua a verificação de segurança e tente novamente.');
+        }
+
+        const resposta = await fetch('/api/contact', {
           method: 'POST',
-          mode: 'no-cors',
-          body: JSON.stringify(payload)
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, turnstileToken: token })
         });
+        const resultado = await resposta.json().catch(() => null);
+        if (!resposta.ok || !resultado || resultado.ok !== true) {
+          throw new Error('Não foi possível confirmar o recebimento. Tente novamente mais tarde.');
+        }
 
         btnSubmit.textContent = 'Mensagem enviada!';
         btnSubmit.style.background = '#1da46a';
         btnSubmit.style.color = '#f0fdf5';
+        status.textContent = 'Seu contato foi registrado. Nossa equipe responderá em breve.';
+        status.dataset.tipo = 'sucesso';
         this.reset();
+        if (window.turnstile && typeof window.turnstile.reset === 'function') window.turnstile.reset();
         setTimeout(() => {
           btnSubmit.textContent = textoOriginal;
           btnSubmit.style.background = '';
@@ -472,9 +505,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       } catch (err) {
         console.error('Erro ao enviar:', err);
-        alert('Não foi possível enviar. Verifique sua conexão e tente novamente.');
+        status.textContent = err.message || 'Não foi possível enviar. Tente novamente.';
+        status.dataset.tipo = 'erro';
         btnSubmit.textContent = textoOriginal;
         btnSubmit.disabled = false;
+        if (window.turnstile && typeof window.turnstile.reset === 'function') window.turnstile.reset();
       }
     });
 
